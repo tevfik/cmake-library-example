@@ -1,0 +1,11 @@
+language: c
+
+env:
+  global:
+    - C_FLAGS="-Wall -Werror -pedantic"
+
+script:
+     - mkdir -p build
+     - cd build
+     - cmake -DCMAKE_BUILD_TYPE=Release -Dtest=ON ..
+     - make test
