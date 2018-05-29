@@ -1,10 +1,9 @@
-cmake_minimum_required (VERSION 3.9)
-project (HELLO)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.9)
+PROJECT(str-util)
 
-add_library (str_util SHARED str_util.c)
+INCLUDE(CTest)
 
-target_include_directories (str_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ADD_SUBDIRECTORY(src)
 
-add_executable (strUtilDemo demo.c)
-
-target_link_libraries (strUtilDemo LINK_PUBLIC str_util)
+ENABLE_TESTING()
+ADD_SUBDIRECTORY(test)

@@ -1,7 +1,7 @@
 #include <stdlib.h> // calloc
 #include <string.h>
 
-#include "str_util.h"
+#include "str-util.h"
 
 char *str_reverse(char *str) {
         size_t len = strlen(str);
